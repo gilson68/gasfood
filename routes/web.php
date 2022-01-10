@@ -77,6 +77,14 @@ Route::prefix('admin')
             Route::post('profiles/{id}/permissions',                       'ACL\PermissionProfileController@attachPermissionsProfile')->name('profiles.permissions.attach');
         });
 
+        Route::get('/dashboard', function () {
+            return view('dashboard');
+        })->middleware(['auth'])->name('dashboard');
+
+
+
 Route::get('/', function () {
     return view('welcome');
 });
+
+require __DIR__.'/auth.php';
