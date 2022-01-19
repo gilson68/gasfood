@@ -9,24 +9,8 @@
         <!-- Validation Errors -->
         <x-auth-validation-errors class="mb-4" :errors="$errors" />
 
-        <p><strong>Plano:</strong> {{ session('plan')->name ?? '-'}}</p>
-
         <form method="POST" action="{{ route('register') }}">
             @csrf
-
-            <!-- Empresa -->
-            <div>
-                <x-label for="empresa" :value="__('Empresa')" />
-
-                <x-input id="empresa" class="block mt-1 w-full" type="text" name="empresa" :value="old('empresa')" required autofocus />
-            </div>
-
-            <!-- CNPJ -->
-            <div>
-                <x-label for="cnpj" :value="__('CNPJ')" />
-
-                <x-input id="cnpj" class="block mt-1 w-full" type="text" name="cnpj" :value="old('cnpj')" required autofocus />
-            </div>
 
             <!-- Name -->
             <div>

@@ -19,6 +19,14 @@ class Plan extends Model
     }
 
     /**
+     * Get TENANTS
+     */
+    public function tenants()
+    {
+        return $this->hasMany(Tenant::class);
+    }
+
+    /**
      * Get Details
      */
     public function details()
